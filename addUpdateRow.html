@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+	<meta charset="utf-8" />
+</head>
+<body>
+
+    <table id="myTable" border="1">
+        <tr>
+            <td>Row 1 cell1</td>
+            <td>Row 1 cell2</td>
+        </tr>
+        <tr>
+            <td>Row 2 cell1</td>
+            <td>Row 2 cell2</td>
+        </tr>
+        <tr>
+            <td>Row 3 cell1</td>
+            <td>Row 3 cell2</td>
+        </tr>
+
+
+    </table>
+    
+   
+        <br>
+
+<button onclick="myFunction()">Add Row</button>
+    <button onclick="myDeleteFunction()">Delete Row</button>
+    <button onclick="myUpdate()">Update Cell</button>
+
+<script>
+function myFunction() {
+    var table = document.getElementById("myTable");
+    var row = table.insertRow(0);
+    var cell1 = row.insertCell(0);
+    var cell2 = row.insertCell(1);
+    cell1.innerHTML = "NEW CELL1";
+    cell2.innerHTML = "NEW CELL2";
+}
+function myDeleteFunction() {
+    document.getElementById("myTable").deleteRow(0);
+}
+        </script>
+    <script>
+        function myUpdate() {
+            var x = document.getElementById("myTable").rows[0].cells;
+            x[0].innerHTML = "NEW CONTENT";
+        }
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>JavaScript current day and time</title>
+	<meta charset="utf-8" />
+</head>
+<body>
+    <div id="demo">
+        <h1>3 Date Formats</h1>
+        <p id="dateFormats"></p>
+        <button type="button" onclick="formatDates()">Display Date Formats</button>       <!--need to call function-->
+    </div>
+    <script>
+        function formatDates() {  /* can name functions whatever you want */
+             var today = new Date();  /* putting date object into our var*/
+             var dd = today.getDate(); 
+             var mm = today.getMonth() + 1;
+             var yyyy = today.getFullYear();
+
+
+            //mm-dd-yyyy
+            //mm/dd/yyyy
+            //dd/mm/yyyy
+            
+
+
+             document.getElementById("dateFormats").innerHTML = mm + '-' + dd + '-' + yyyy;     /*indicating to write in browser our innerhtml into the <P> id element and enter var today into the innerHTML*/
+             document.getElementById("dateFormats").innerHTML = mm + '/' + dd + '/' + yyyy;
+             document.getElementById("dateFormats").innerHTML = dd + '/' + mm + '/' + yyyy;
+        }
+       
+    
+    
+    </script>
+
+</body>
+</html>

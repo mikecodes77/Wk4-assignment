@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Week 4 Assignment, Current day and time</title>
+	<meta charset="utf-8" />
+   
+
+</head>
+<body>
+    <h4></h4> <p id="demo"></p>
+
+    <h4></h4>
+    <p id="timenow"></p>
+    
+    <script>
+        var d = new Date();
+        var days =
+            ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"];
+        document.getElementById("demo").innerHTML = ("Today is: " + days[d.getDay()]);
+    </script> 
+
+    <!--
+    <button onclick="myFunction()">Try it</button>
+        -->
+    
+    <script>
+        var currentTime = new Date();
+        hours = currentTime.getHours();
+        minutes = currentTime.getMinutes();
+        seconds = currentTime.getSeconds();
+
+        if (minutes < 10) {
+            minutes = "0" + minutes;
+        }
+        var suffix = "AM";
+        if (hours >= 12){
+            suffix = "PM";
+        hours = hours - 12;
+        }
+        if (hours == 0) {
+            hours = 12;
+
+        }
+
+        document.getElementById("timenow").innerHTML = ("Current time is: " + hours + " " + suffix + " " + ":" + " " + minutes + ":" + seconds);
+
+
+
+
+
+        /*
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+document.getElementById("demo").innerHTML = fruits;
+
+function myFunction() {
+    fruits.push("Lemon");
+    document.getElementById("demo").innerHTML = fruits;
+}  */
+    </script>
+</body>
+</html>
